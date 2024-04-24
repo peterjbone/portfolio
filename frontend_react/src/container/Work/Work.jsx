@@ -1,7 +1,7 @@
 import "./Work.scss";
 
 function Work() {
-	return <div>About</div>;
+	return <div>Work</div>;
 }
 
 export default Work;

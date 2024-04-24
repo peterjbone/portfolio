@@ -1,7 +1,7 @@
 import "./Skills.scss";
 
 function Skills() {
-	return <div>About</div>;
+	return <div>Skills</div>;
 }
 
 export default Skills;

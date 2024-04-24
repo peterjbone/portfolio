@@ -1,7 +1,7 @@
 import "./Testimonial.scss";
 
 function Testimonial() {
-	return <div>About</div>;
+	return <div>Testimonial</div>;
 }
 
 export default Testimonial;
