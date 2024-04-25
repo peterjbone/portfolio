@@ -54,3 +54,8 @@ yarn-error.log*
 
 # Dotenv and similar local-only files
 *.local
+
+# Enviroment variables
+.env
+./frontend_react/.env
+./backend_sanity/.env
