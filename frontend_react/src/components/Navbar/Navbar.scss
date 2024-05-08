@@ -15,22 +15,6 @@
 	-webkit-backdrop-filter: blur(4px);
 }
 
-.app__navbar-logo {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-
-	img {
-		width: 90px;
-		height: 20px;
-
-		@media screen and (min-width: 2000px) {
-			width: 180px;
-			height: 40px;
-		}
-	}
-}
-
 .app__navbar-links {
 	flex: 1;
 	display: flex;
@@ -45,16 +29,9 @@
 		cursor: pointer;
 		flex-direction: column;
 
-		// div {
-		// 	width: 5px;
-		// 	height: 5px;
-		// 	margin-bottom: 5px;
-		// 	border: 50%;
-		// 	background: transparent;
-		// }
-
 		a {
 			font-weight: 500;
+			font-size: 1rem;
 			text-decoration: none;
 			color: var(--gray-color);
 			flex-direction: column;
@@ -65,12 +42,6 @@
 				color: var(--secondary-color);
 			}
 		}
-
-		// &:hover {
-		// 	div {
-		// 		background: var(--secondary-color);
-		// 	}
-		// }
 	}
 
 	@media screen and (max-width: 900px) {

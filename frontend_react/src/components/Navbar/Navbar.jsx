@@ -1,22 +1,39 @@
-import { useState } from "react";
 import "./Navbar.scss";
-import { images } from "../../constants";
+import { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
+	const sections = [
+		{ name: "Inicio", link: "home" },
+		{ name: "Sobre mí", link: "about" },
+		{ name: "Proyectos", link: "work" },
+		{ name: "Habilidades", link: "skills" },
+		{ name: "Contacto", link: "contact" }
+	];
 
 	return (
 		<nav className="app__navbar">
-			<div className="app__navbar-logo">
-				<img src={images.logo} alt="logo" />
+			<div
+				className="logo-text"
+				style={{
+					position: "relative",
+					top: "-3px",
+					left: "3px",
+					textAlign: "center",
+					fontWeight: 800,
+					fontSize: "2rem"
+				}}>
+				<a href="/" style={{ color: "initial", textDecoration: "none" }}>
+					J<span className="secondary-clr">B</span>
+				</a>
 			</div>
 
 			<ul className="app__navbar-links">
-				{["home", "about", "work", "skills", "contact"].map((item) => (
-					<li key={`link-${item}`} className="app__flex p-text">
-						<a href={`#${item}`}>{item}</a>
+				{sections.map((item) => (
+					<li key={`link-${item.name}`} className="app__flex p-text">
+						<a href={`#${item.link}`}>{item.name}</a>
 					</li>
 				))}
 			</ul>
@@ -29,10 +46,10 @@ const Navbar = () => {
 						transition={{ duration: 0.85, ease: "easeOut" }}>
 						<HiX onClick={() => setToggle(false)} />
 						<ul>
-							{["home", "about", "work", "skills", "contact"].map((item) => (
-								<li key={item}>
-									<a href={`#${item}`} onClick={() => setToggle(false)}>
-										{item}
+							{sections.map((item) => (
+								<li key={item.name}>
+									<a href={`#${item.link}`} onClick={() => setToggle(false)}>
+										{item.name}
 									</a>
 								</li>
 							))}

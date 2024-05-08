@@ -26,13 +26,13 @@ function Header() {
 					<div className="badge-cmp app__flex">
 						<span>👋</span>
 						<div style={{ marginLeft: 20 }}>
-							<p className="p-text">Hello, I am </p>
+							<p className="p-text">Hola, yo soy</p>
 							<h1 className="head-text">Joao</h1>
 						</div>
 					</div>
 
 					<div className="tag-cmp app__flex">
-						<p className="p-text">Web developer</p>
+						<p className="p-text">Desarrollador web</p>
 						<p className="p-text">Fullstack</p>
 					</div>
 				</div>
@@ -57,11 +57,13 @@ function Header() {
 				variants={scaleVariants}
 				whileInView={scaleVariants.whileInView}
 				className="app__header-circles">
-				{[images.flutter, images.redux, images.sass].map((circle, index) => (
-					<div className="circle-cmp app__flex" key={`circle-${index}`}>
-						<img src={circle} alt="circle" />
-					</div>
-				))}
+				{[images.nextjs, images.tailwind, images.typescript].map(
+					(circle, index) => (
+						<div className="circle-cmp app__flex" key={`circle-${index}`}>
+							<img src={circle} alt="circle" />
+						</div>
+					)
+				)}
 			</motion.div>
 		</div>
 	);
