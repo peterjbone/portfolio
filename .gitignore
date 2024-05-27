@@ -1,6 +1,8 @@
 node_modules
+build
 
 # --------------- FRONTEND -----------------
+./frontend_react/build
 
 # dependencies
 ./frontend_react/node_modules

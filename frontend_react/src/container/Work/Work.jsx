@@ -43,7 +43,7 @@ function Work() {
 			</h2>
 
 			<div className="app__work-filter">
-				{["Clone app", "Todos"].map((item, index) => (
+				{["Web app", "Clone app", "Todos"].map((item, index) => (
 					<div
 						key={index}
 						onClick={() => handleWorkFilter(item)}
@@ -54,8 +54,6 @@ function Work() {
 					</div>
 				))}
 			</div>
-
-      {console.log(works)}
 
 			<motion.div
 				animate={animateCard}
