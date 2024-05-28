@@ -2,12 +2,12 @@ import "./About.scss";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { saveAs } from "file-saver";
-import document from "./curriculum.pdf";
+import resume from "./resume.pdf";
 
 function About() {
 	function descargarPDF() {
-		//console.log(document);
-		const url = document;
+		//console.log(resume);
+		const url = resume;
 		const nombreArchivo = "joao_bone.pdf";
 		saveAs(url, nombreArchivo);
 	}
