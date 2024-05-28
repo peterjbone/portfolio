@@ -65,7 +65,6 @@ function Footer() {
 					<div className="app__footer-form app__flex">
 						<div className="app__flex">
 							<input
-								className="p-text"
 								type="text"
 								placeholder="Tu nombre"
 								name="name"
@@ -75,7 +74,6 @@ function Footer() {
 						</div>
 						<div className="app__flex">
 							<input
-								className="p-text"
 								type="email"
 								placeholder="Tu email"
 								name="email"
@@ -85,7 +83,6 @@ function Footer() {
 						</div>
 						<div>
 							<textarea
-								className="p-text"
 								placeholder="Tu mensaje"
 								value={formData.message}
 								name="message"
