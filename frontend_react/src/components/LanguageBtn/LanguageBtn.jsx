@@ -1,4 +1,3 @@
-//import React from "react";
 import styles from "./LanguageBtn.module.css";
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
@@ -6,7 +5,6 @@ import React, { useState, useEffect } from "react";
 const LanguageBtns = () => {
 	const { i18n } = useTranslation();
 	const [isSpanishLng, setIsSpanishLng] = useState(true);
-	console.log(isSpanishLng);
 
 	function changeLanguage(lng) {
 		i18n.changeLanguage(lng);
