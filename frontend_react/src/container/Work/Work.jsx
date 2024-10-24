@@ -15,6 +15,8 @@ function Work() {
 		const query = '*[_type == "works"]';
 
 		client.fetch(query).then((data) => {
+			console.log(data);
+
 			setWorks(data);
 			setFilterWork(data);
 		});
@@ -37,13 +39,15 @@ function Work() {
 
 	//prettier-ignore
 	return (
-		<>
+    <>
+      
 			<h2 className="head-text">
 				Proyectos de mi <span>Portfolio</span>
 			</h2>
 
+
 			<div className="app__work-filter">
-				{["Web app", "Clone app", "Todos"].map((item, index) => (
+				{["Todos los proyectos", "Principales", "Secundarios"].map((item, index) => (
 					<div
 						key={index}
 						onClick={() => handleWorkFilter(item)}
@@ -103,7 +107,7 @@ function Work() {
 							<h4 className="bold-text">{work.title}</h4>
 							<p className="p-text" style={{ marginTop: 10 }}>
 								{work.description}
-							</p>
+							</p> 
 
 							<div className="app__work-tag app__flex">
 								<p className="p-text">{work.tags[0]}</p>
