@@ -1,0 +1,11 @@
+{
+	"greeting": "Hola, yo soy",
+	"myName": "Joao",
+
+	"about": "Sobre",
+	"me": "mí",
+	"titleIntroduction": "Hola, mi nombre es",
+	"introParagraphOne": "Hola! Soy un desarrollador web Frontend en busca de oportunidades para sumarme a un equipo de trabajo para poder aportar mis habilidades y seguir aprendiendo más sobre este campo.",
+	"introParagraphTwo": "Tomé un bootcamp de desarrollador Fullstack llamado “Henry” donde aprendí conceptos básicos de programación y el uso de tecnologías para el desarrollo web (el stack principal fue: React, Node, Express y PostgreSQL)",
+	"introParagraphThree": "Y en lo personal sigo estudiando y aprendiendo nuevas tecnologías de manera autodidacta."
+}

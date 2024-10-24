@@ -1,0 +1,11 @@
+{
+	"greeting": "Hi, I am",
+	"myName": "Joao",
+
+	"about": "About",
+	"me": "me",
+	"titleIntroduction": "Hello, my name is",
+	"introParagraphOne": "Hi! I am a Frontend web developer looking for opportunities to join a work team so I can contribute with my skills and continue learning more about this field.",
+	"introParagraphTwo": "I took a Fullstack developer bootcamp called 'Henry' where I learned basic programming concepts and the use of technologies for web development (the main stack was: React, Node, Express and PostgreSQL)",
+	"introParagraphThree": "And I personally continue studying and learning new technologies in a self-taught way."
+}

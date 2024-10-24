@@ -2,6 +2,8 @@ import "./Navbar.scss";
 import { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
+import LanguageBtns from "../LanguageBtn/LanguageBtn.jsx";
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
@@ -32,13 +34,15 @@ const Navbar = () => {
 
 			<ul className="app__navbar-links">
 				{sections.map((item) => (
-					<li key={`link-${item.name}`} className="app__flex p-text">
+					<li key={uuidv4()} className="app__flex p-text">
 						<a href={`#${item.link}`}>{item.name}</a>
 					</li>
 				))}
 			</ul>
 
-			<div className="app__navbar-menu">
+			{<LanguageBtns />}
+
+			{/* <div className="app__navbar-menu">
 				<HiMenuAlt4 onClick={() => setToggle(true)} />
 				{toggle && (
 					<motion.div
@@ -56,7 +60,7 @@ const Navbar = () => {
 						</ul>
 					</motion.div>
 				)}
-			</div>
+			</div> */}
 		</nav>
 	);
 };

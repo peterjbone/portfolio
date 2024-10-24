@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { saveAs } from "file-saver";
 import resume from "./resume.pdf";
+import { useTranslation } from "react-i18next";
 
 function About() {
+	const { t } = useTranslation();
+
 	function descargarPDF() {
-		//console.log(resume);
 		const url = resume;
 		const nombreArchivo = "joao_bone.pdf";
 		saveAs(url, nombreArchivo);
@@ -16,7 +18,7 @@ function About() {
 	return (
 		<>
 			<h2 className="head-text">
-				Sobre <span>mí</span>
+				{t("about")} <span>{t("me")}</span>
 			</h2>
 			<div className="app__profiles">
 				<motion.div
@@ -26,20 +28,14 @@ function About() {
 					className="app__profile-item introduction"
 					key="introduction">
 					<h2>
-						Hola, mi nombre es <span>Joao</span> 🧑🏽
+						{t("titleIntroduction")} <span>Joao</span> 🧑🏽
 					</h2>
 					<p>
-						¡Hola! Soy un desarrollador web fullstack de Guayaquil, Ecuador, con
-						dos años de experiencia en el campo. Recientemente, completé el
-						bootcamp de "Henry", donde perfeccioné mis habilidades en
-						tecnologías como JavaScript, React, Next.js, Tailwind CSS,
-						TypeScript, Node.js, Express, MongoDB, MySQL, PostgreSQL, Python y
-						PHP. <br /> <br />
-						Estoy constantemente aprendiendo y actualizándome con las últimas
-						tendencias en desarrollo web. Si buscas un desarrollador
-						comprometido y apasionado para tu equipo, no dudes en contactarme.
-						Estoy emocionado por la oportunidad de contribuir a proyectos
-						interesantes y ayudar a alcanzar los objetivos de tu empresa.
+            {t("introParagraphOne")}
+            <br />
+            {t("introParagraphTwo")}
+            <br />
+            {t("introParagraphThree")}
 					</p>
 					<button onClick={descargarPDF}>
 						Descargar CV
@@ -94,8 +90,4 @@ function About() {
 	);
 }
 
-export default AppWrap(
-	MotionWrap(About, "app__about"),
-	"about",
-	"app__whitebg"
-);
+export default AppWrap(MotionWrap(About, "app__about"), "about", "app__whitebg");
