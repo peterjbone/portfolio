@@ -1,14 +1,19 @@
 .languageBtns {
-	position: relative;
-	/* 	top: 15px;
-	right: 15px; */
-
 	width: fit-content;
 	max-width: 300px;
-	padding: 0.5rem;
-	border: 3px solid red;
+	/* border: 3px solid red; */
 }
 
 .languageBtns > button {
-	padding: 1rem;
+	padding: 0.8rem;
+	border: none;
+	font-size: 1rem;
+	background-color: white;
+	cursor: pointer;
+}
+
+.languageBtns > button.active {
+	color: white;
+	background-color: var(--secondary-color);
+	transition: 0.5s;
 }

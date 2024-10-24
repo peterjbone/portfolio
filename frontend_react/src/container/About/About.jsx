@@ -32,9 +32,9 @@ function About() {
 					</h2>
 					<p>
             {t("introParagraphOne")}
-            <br />
+            <br /><br />
             {t("introParagraphTwo")}
-            <br />
+            <br /><br />
             {t("introParagraphThree")}
 					</p>
 					<button onClick={descargarPDF}>
