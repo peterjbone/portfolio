@@ -1,8 +1,12 @@
+import React, { useState, useEffect } from "react";
 import styles from "./LanguageBtn.module.css";
 import { useTranslation } from "react-i18next";
-import React, { useState, useEffect } from "react";
+import { useLanguageStore } from "../../stores/languageStore";
 
 const LanguageBtns = () => {
+	//* global action
+	const changeLng = useLanguageStore((state) => state.changeLng);
+
 	const { i18n } = useTranslation();
 	const [isSpanishLng, setIsSpanishLng] = useState(true);
 
@@ -10,8 +14,10 @@ const LanguageBtns = () => {
 		i18n.changeLanguage(lng);
 		if (lng === "es") {
 			setIsSpanishLng(true);
+			changeLng("es");
 		} else {
 			setIsSpanishLng(false);
+			changeLng("en");
 		}
 	}
 

@@ -7,6 +7,7 @@ import skillsBack from '../schemas/skillsBack'
 import testimonials from '../schemas/testimonials'
 import workExperience from '../schemas/workExperience'
 import works from '../schemas/works'
+import trabajos from '../schemas/trabajos'
 
 export const schemaTypes = [
   abouts,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   testimonials,
   workExperience,
   works,
+  trabajos,
 ]
