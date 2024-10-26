@@ -8,7 +8,6 @@
 	width: 100%;
 	height: auto;
 	margin-top: 2rem;
-	/* border: medium solid blue; */
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -20,10 +19,8 @@
 }
 
 .app__profile-item {
-	/* 	width: 190px; */
 	padding: 1.2rem 2rem;
 	margin: 1rem;
-	/* 	border: 3px solid red; */
 	border-radius: 20px;
 	background-color: var(--primary-color);
 	display: flex;
@@ -32,10 +29,6 @@
 	align-items: flex-start;
 	gap: 1rem;
 	box-shadow: 5px 5px 20px #0005;
-
-	/* 	&:hover {
-		transition: 0.5s;
-	} */
 }
 
 .introduction {
@@ -54,24 +47,32 @@
 		line-height: 1.5;
 	}
 
-	button {
-		align-self: center;
-		padding: 0.8rem 1rem;
-		border: medium solid var(--secondary-color);
-		font-weight: 700;
-		font-size: 1rem;
-		color: var(--secondary-color);
-		background-color: transparent;
-
+	div {
+		width: 100%;
 		display: flex;
-		align-items: center;
-		gap: 0.8rem;
+		flex-flow: row nowrap;
+		justify-content: center;
+		gap: 1rem;
 
-		&:hover {
-			transition: 0.3s;
-			cursor: pointer;
-			color: #fff;
-			background-color: var(--secondary-color);
+		button {
+			align-self: center;
+			padding: 0.8rem 1rem;
+			border: medium solid var(--secondary-color);
+			font-weight: 700;
+			font-size: 1rem;
+			color: var(--secondary-color);
+			background-color: transparent;
+
+			display: flex;
+			align-items: center;
+			gap: 0.8rem;
+
+			&:hover {
+				transition: 0.3s;
+				cursor: pointer;
+				color: #fff;
+				background-color: var(--secondary-color);
+			}
 		}
 	}
 }

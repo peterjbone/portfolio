@@ -2,15 +2,22 @@ import "./About.scss";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { saveAs } from "file-saver";
-import resume from "./resume.pdf";
+import curriculumESP from "./resume_v3_ESP.pdf";
+import resumeENG from "./resume_v3_ENG.pdf";
 import { useTranslation } from "react-i18next";
 
 function About() {
 	const { t } = useTranslation();
 
-	function descargarPDF() {
-		const url = resume;
-		const nombreArchivo = "joao_bone.pdf";
+	function descargarCurriculum() {
+		const url = curriculumESP;
+		const nombreArchivo = "Curriculum_BoneJoao";
+		saveAs(url, nombreArchivo);
+	}
+
+	function downloadResume() {
+		const url = resumeENG;
+		const nombreArchivo = "Resume_BoneJoao";
 		saveAs(url, nombreArchivo);
 	}
 
@@ -31,31 +38,55 @@ function About() {
 						{t("titleIntroduction")} <span>Joao</span> 🧑🏽
 					</h2>
 					<p>
-            {t("introParagraphOne")}
-            <br /><br />
-            {t("introParagraphTwo")}
-            <br /><br />
-            {t("introParagraphThree")}
-					</p>
-					<button onClick={descargarPDF}>
-						Descargar CV
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							fill="currentColor"
-							class="bi bi-box-arrow-down"
-							viewBox="0 0 16 16">
-							<path
-								fill-rule="evenodd"
-								d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1z"
-							/>
-							<path
-								fill-rule="evenodd"
-								d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"
-							/>
-						</svg>
-					</button>
+						{t("introParagraphOne")}
+						<br />
+						<br />
+						{t("introParagraphTwo")}
+						<br />
+						<br />
+						{t("introParagraphThree")}
+          </p>
+          {/* DOWNLOAD BUTTONS */}
+					<div>
+						<button onClick={descargarCurriculum}>
+							Curriculum ESP
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="currentColor"
+								class="bi bi-box-arrow-down"
+								viewBox="0 0 16 16">
+								<path
+									fill-rule="evenodd"
+									d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1z"
+								/>
+								<path
+									fill-rule="evenodd"
+									d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"
+								/>
+							</svg>
+						</button>
+						<button onClick={downloadResume}>
+							Resume ENG
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="currentColor"
+								class="bi bi-box-arrow-down"
+								viewBox="0 0 16 16">
+								<path
+									fill-rule="evenodd"
+									d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1z"
+								/>
+								<path
+									fill-rule="evenodd"
+									d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"
+								/>
+							</svg>
+						</button>
+					</div>
 				</motion.div>
 				<motion.div
 					whileInView={{ opacity: 1 }}
@@ -64,10 +95,10 @@ function About() {
 					className="app__profile-item information"
 					key="introduction">
 					<h2>
-						Información <span>personal</span> 📄
+            {t("information")} <span>{ t("personal")}</span> 📄
 					</h2>
 					<p>
-						<span>Nombre completo:</span> Joao Peter Bone Peña
+            <span>{t("full name")}</span> Joao Peter Bone Peña
 					</p>
 					<p>
 						<span>Edad:</span> 23 años (05/06/2001)

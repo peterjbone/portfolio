@@ -5,7 +5,10 @@
 	"about": "Sobre",
 	"me": "mí",
 	"titleIntroduction": "Hola, mi nombre es",
-	"introParagraphOne": "Hola! Soy un desarrollador web Frontend en busca de oportunidades para sumarme a un equipo de trabajo para poder aportar mis habilidades y seguir aprendiendo más sobre este campo.",
-	"introParagraphTwo": "Tomé un bootcamp de desarrollador Fullstack llamado “Henry” donde aprendí conceptos básicos de programación y el uso de tecnologías para el desarrollo web (el stack principal fue: React, Node, Express y PostgreSQL)",
-	"introParagraphThree": "Y en lo personal sigo estudiando y aprendiendo nuevas tecnologías de manera autodidacta."
+	"introParagraphOne": "Soy Joao Bone, un desarrollador Frontend de 23 años radicado en Guayaquil, Ecuador. Mi foco principal está en el mundo del desarrollo Front End, pero también tengo conocimientos de desarrollo Back End. Estoy buscando oportunidades para unirme a un equipo de trabajo para poder aportar mis habilidades y seguir aprendiendo más sobre este campo.",
+	"introParagraphTwo": "Tomé un bootcamp de desarrollador Fullstack llamado 'Henry' donde aprendí conceptos básicos de programación y el uso de tecnologías para el desarrollo web Full Stack como el stack PERN (PostgreSQL, Express, React y Node).",
+	"introParagraphThree": "Y personalmente sigo estudiando y aprendiendo nuevas tecnologías de forma autodidacta. Puedes revisar mi currículum para más información sobre mí.",
+	"information": "información",
+	"personal": "personal",
+	"full name": "Nombre completo:"
 }
