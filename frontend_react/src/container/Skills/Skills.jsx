@@ -4,13 +4,17 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client.js";
 //import { Tooltip as ReactToolTip } from "react-tooltip";
+import { useTranslation } from "react-i18next";
 
 function Skills() {
 	const [skills, setSkills] = useState([]);
 	const [skillsBack, setSkillsBack] = useState([]);
+	const { t } = useTranslation();
 
+	//? Cuando se monta el componente
+	//? Trae las habilidades desde el back de sanity
 	useEffect(() => {
-		const skillsQuery = '*[_type == "skills"]';
+		const skillsQuery = '*[_type == "skills"]'; //todo: cambiar a skillsfront
 		const skillsBackQuery = '*[_type == "skillsBack"]';
 
 		client.fetch(skillsQuery).then((data) => {
@@ -25,7 +29,7 @@ function Skills() {
 	//prettier-ignore
 	return (
 		<>
-			<h2 className="head-text">Habilidades</h2>
+      <h2 className="head-text">{t("skills")}</h2>
 
       <div className="app__skills-supcontainer">
         
@@ -73,8 +77,4 @@ function Skills() {
 	);
 }
 
-export default AppWrap(
-	MotionWrap(Skills, "app__skills"),
-	"skills",
-	"app__whitebg"
-);
+export default AppWrap(MotionWrap(Skills, "app__skills"), "skills", "app__whitebg");
