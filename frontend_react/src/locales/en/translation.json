@@ -25,5 +25,7 @@
 	"yourName": "Your name",
 	"yourEmail": "Your email",
 	"yourMessage": "Your message",
-	"sendMessage": "Send message"
+	"sendMessage": "Send message",
+	"thanks": "Thank you for contacting me!",
+	"response": "I will reply to you as soon as possible."
 }

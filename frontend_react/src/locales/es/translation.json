@@ -26,5 +26,7 @@
 	"yourName": "Tu nombre",
 	"yourEmail": "Tu email",
 	"yourMessage": "Tu mensaje",
-	"sendMessage": "Envíar mensaje"
+	"sendMessage": "Envíar mensaje",
+	"thanks": "Gracias por ponerte en contacto conmigo!",
+	"response": "Te responderé en la brevedad posible."
 }

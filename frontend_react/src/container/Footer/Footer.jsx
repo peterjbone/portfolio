@@ -41,6 +41,10 @@ function Footer() {
 			setLoading(false);
 			setIsFormSubmitted(true);
 		});
+
+		setTimeout(() => {
+			window.location.reload();
+		}, 3000);
 	}
 
 	//prettier-ignore
@@ -99,8 +103,8 @@ function Footer() {
 				</>
 			) : (
 				<div className="message-sent">
-					<h3>Gracias por ponerte en contacto conmigo!</h3>
-					<p>Te responderé en la brevedad posible.</p>
+            <h3>{t("thanks")}</h3>
+            <p>{t("response")}</p>
 				</div>
 			)}
 		</>
