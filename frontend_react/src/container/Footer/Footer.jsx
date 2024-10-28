@@ -69,7 +69,7 @@ function Footer() {
 						<div className="app__flex">
 							<input
 								type="text"
-								placeholder="Tu nombre"
+								placeholder={`${t("yourName")}`}
 								name="name"
 								value={formData.name}
 								onChange={handleChangeInput}
@@ -78,7 +78,7 @@ function Footer() {
 						<div className="app__flex">
 							<input
 								type="email"
-								placeholder="Tu email"
+								placeholder={`${t("yourEmail")}`}
 								name="email"
 								value={formData.email}
 								onChange={handleChangeInput}
@@ -86,14 +86,14 @@ function Footer() {
 						</div>
 						<div>
 							<textarea
-								placeholder="Tu mensaje"
+								placeholder={`${t("yourMessage")}`}
 								value={formData.message}
 								name="message"
 								onChange={handleChangeInput}
 							/>
 						</div>
 						<button type="button" className="p-text" onClick={handleSubmit}>
-							{!loading ? "Send Message" : "Sending..."}
+							{!loading ? `${t("sendMessage")}` : "Sending..."}
 						</button>
 					</div>
 				</>
