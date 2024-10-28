@@ -3,8 +3,11 @@ import { useState } from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client.js";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+	const { t } = useTranslation();
+
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -45,7 +48,7 @@ function Footer() {
 		<>
 			{!isFormSubmitted ? (
 				<>
-					<h2 className="head-text">Comunícate conmigo 😃</h2>
+					<h2 className="head-text">{t("contact")} 😃</h2>
 
 					<div className="app__footer-cards">
 						<div className="app__footer-card">

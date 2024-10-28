@@ -19,5 +19,10 @@
 
 	"projects": "Projects",
 
-	"skills": "Skills"
+	"skills": "Skills",
+
+	"contact": "Contact me",
+	"yourName": "Your name",
+	"yourEmail": "Your email",
+	"yourMessage": "Your message"
 }
