@@ -15,5 +15,7 @@
 	"residence": "Residence:",
 	"availability": "Availability:",
 	"immediate": "Immediate",
-	"timeZone": "Time zone:"
+	"timeZone": "Time zone:",
+
+	"projects": "Projects"
 }

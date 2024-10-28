@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client.js";
 import { useLanguageStore } from "../../stores/languageStore.js";
+import { useTranslation } from "react-i18next";
 
 function Work() {
+	const { t } = useTranslation();
+
 	const [activeFilter, setActiveFilter] = useState("Todos");
 	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 	const [works, setWorks] = useState([]);
@@ -70,7 +73,7 @@ function Work() {
 		<>
 			{/* TITLES */}
 			<h2 className="head-text">
-				Proyectos de mi <span>Portfolio</span>
+				{t("projects")}
 			</h2>
 
 			{/* FILTER BUTTONS */}
