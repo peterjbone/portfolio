@@ -10,7 +10,7 @@ const LanguageBtns = () => {
 	const { i18n } = useTranslation();
 	const [isSpanishLng, setIsSpanishLng] = useState(true);
 
-	function changeLanguage(lng) {
+	function changeLanguageFn(lng) {
 		i18n.changeLanguage(lng);
 		if (lng === "es") {
 			setIsSpanishLng(true);
@@ -24,17 +24,18 @@ const LanguageBtns = () => {
 	//? para cambiar a idioma que quedo guardado en el localstorage
 	useEffect(() => {}, []);
 
+	//************************************** LANGUAGEBTN COMPONENT
 	return (
 		<div className={styles.languageBtns}>
 			<button
 				type="button"
-				onClick={() => changeLanguage("en")}
+				onClick={() => changeLanguageFn("en")}
 				className={!isSpanishLng ? `${styles.active}` : undefined}>
 				English
 			</button>
 			<button
 				type="button"
-				onClick={() => changeLanguage("es")}
+				onClick={() => changeLanguageFn("es")}
 				className={isSpanishLng ? `${styles.active}` : undefined}>
 				Español
 			</button>

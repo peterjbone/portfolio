@@ -1,19 +1,21 @@
+import { v4 as uuidv4 } from "uuid";
+
 function NavigationDots({ active }) {
 	const sections = [
-		{ name: "Inicio", link: "home" },
-		{ name: "Sobre mí", link: "about" },
-		{ name: "Proyectos", link: "work" },
-		{ name: "Habilidades", link: "skills" },
-		{ name: "Contacto", link: "contact" }
+		{ link: "home" },
+		{ link: "about" },
+		{ link: "work" },
+		{ link: "skills" },
+		{ link: "contact" }
 	];
 
 	//prettier-ignore
 	return (
 		<div className="app__navigation">
-			{sections.map((item, index) => (
+			{sections.map((item) => (
 				<a
 					aria-label="Navigation dots"
-					key={item.name + index}
+					key={uuidv4()}
 					href={`#${item.link}`}
 					className="app__navigation-dot"
 					style={active === item ? { backgroundColor: "#313BAC" } : {}}

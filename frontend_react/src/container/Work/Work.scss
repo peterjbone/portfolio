@@ -5,7 +5,7 @@
 }
 
 .app__work-filter {
-	margin: 4rem 0 2rem;
+	margin: 1.5rem 0;
 
 	display: flex;
 	flex-direction: row;
@@ -43,15 +43,14 @@
 
 .app__work-portfolio {
 	display: flex;
-	/* flex-wrap: wrap; */
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 
 	.app__work-item {
 		min-width: 200px;
-		width: 250px;
-		max-width: 350px;
+		/* width: 250px; */
+		max-width: 300px;
 		margin: 2rem;
 		padding: 1rem;
 		border-radius: 0.5rem;

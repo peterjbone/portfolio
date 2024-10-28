@@ -5,8 +5,10 @@ import { saveAs } from "file-saver";
 import curriculumESP from "./resume_v3_ESP.pdf";
 import resumeENG from "./resume_v3_ENG.pdf";
 import { useTranslation } from "react-i18next";
+import { useLanguageStore } from "../../stores/languageStore";
 
 function About() {
+	const language = useLanguageStore((state) => state.language);
 	const { t } = useTranslation();
 
 	function descargarCurriculum() {
@@ -93,27 +95,31 @@ function About() {
 					whileHover={{ scale: 1.02 }}
 					transition={{ duration: 0.5, type: "tween" }}
 					className="app__profile-item information"
-					key="introduction">
-					<h2>
-            {t("information")} <span>{ t("personal")}</span> 📄
-					</h2>
+          key="introduction">
+          {
+            language === "en" ? (
+              <h2>Personal <span>information</span> 📄</h2>
+            ) : (
+              <h2>Información <span>personal</span> 📄</h2>
+            )
+          }
 					<p>
             <span>{t("full name")}</span> Joao Peter Bone Peña
 					</p>
 					<p>
-						<span>Edad:</span> 23 años (05/06/2001)
+            <span>{t("age")}</span> 23 {t("years")} (05/06/2001)
 					</p>
 					<p>
-						<span>Nacionalidad:</span> Ecuatoriano
+            <span>{t("nacionality")}</span> {t("ecuadorian")}
 					</p>
 					<p>
-						<span>Residencia:</span> Ecuador, Guayaquil, Durán
+            <span>{t("residence")}</span> Ecuador, Guayaquil, Durán
 					</p>
 					<p>
-						<span>Disponibilidad:</span> Inmediata / Full time
+            <span>{t("availability")}</span> {t("immediate")} / Full time
 					</p>
 					<p>
-						<span>Zona horaria:</span> UTC-5
+            <span>{t("timeZone")}</span> GMT-5
 					</p>
 				</motion.div>
 			</div>

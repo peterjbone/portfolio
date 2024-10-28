@@ -1,6 +1,5 @@
 {
 	"greeting": "Hi, I am",
-	"myName": "Joao",
 
 	"about": "About",
 	"me": "me",
@@ -8,7 +7,13 @@
 	"introParagraphOne": "I'm Joao Bone, a 23 year old Frontend developer based in Guayaquil, Ecuador. My main focus lies in the world of Front End development, but I also has knowledge of Back End development. I’m looking for opportunities to join a work team so I can contribute with my skills and continue learning more about this field.",
 	"introParagraphTwo": "I took a Fullstack developer bootcamp called 'Henry' where I learned basic programming concepts and the use of technologies for Full Stack web development like the PERN stack (PostgreSQL, Express, React and Node).",
 	"introParagraphThree": "And I personally continue studying and learning new technologies in a self-taught way. You can check out my resume for more information about me.",
-	"information": "information",
-	"personal": "personal",
-	"full name": "Full name:"
+	"full name": "Full name:",
+	"age": "Age:",
+	"years": "years",
+	"nacionality": "Nacionality:",
+	"ecuadorian": "Ecuadorian",
+	"residence": "Residence:",
+	"availability": "Availability:",
+	"immediate": "Immediate",
+	"timeZone": "Time zone:"
 }

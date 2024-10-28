@@ -2,6 +2,8 @@ import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { AppWrap } from "../../wrapper";
+import { useTranslation } from "react-i18next";
+import { useLanguageStore } from "../../stores/languageStore";
 
 const scaleVariants = {
 	whileInView: {
@@ -15,6 +17,10 @@ const scaleVariants = {
 };
 
 function Header() {
+	const language = useLanguageStore((state) => state.language);
+	const { t } = useTranslation();
+
+	//**************************************** HEADER COMPONENT
 	return (
 		<div className="app__header app__flex">
 			{/* INTRODUCTION */}
@@ -26,15 +32,22 @@ function Header() {
 					<div className="badge-cmp app__flex">
 						<span>👋</span>
 						<div style={{ marginLeft: 20 }}>
-							<p className="p-text">Hola, yo soy</p>
+							<p className="p-text">{t("greeting")}</p>
 							<h1 className="head-text">Joao</h1>
 						</div>
 					</div>
 
-					<div className="tag-cmp app__flex">
-						<p className="p-text">Desarrollador web</p>
-						<p className="p-text">Fullstack</p>
-					</div>
+					{language === "es" ? (
+						<div className="tag-cmp app__flex">
+							<p className="p-text">Desarrollador web</p>
+							<p className="p-text">Frontend</p>
+						</div>
+					) : (
+						<div className="tag-cmp app__flex">
+							<p className="p-text">Frontend</p>
+							<p className="p-text">Web Developer</p>
+						</div>
+					)}
 				</div>
 			</motion.div>
 
@@ -57,13 +70,11 @@ function Header() {
 				variants={scaleVariants}
 				whileInView={scaleVariants.whileInView}
 				className="app__header-circles">
-				{[images.nextjs, images.tailwind, images.typescript].map(
-					(circle, index) => (
-						<div className="circle-cmp app__flex" key={`circle-${index}`}>
-							<img src={circle} alt="circle" />
-						</div>
-					)
-				)}
+				{[images.nextjs, images.tailwind, images.typescript].map((circle, index) => (
+					<div className="circle-cmp app__flex" key={`circle-${index}`}>
+						<img src={circle} alt="circle" />
+					</div>
+				))}
 			</motion.div>
 		</div>
 	);
