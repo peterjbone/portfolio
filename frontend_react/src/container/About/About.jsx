@@ -2,8 +2,8 @@ import "./About.scss";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { saveAs } from "file-saver";
-import curriculumESP from "./resume_v3_ESP.pdf";
-import resumeENG from "./resume_v3_ENG.pdf";
+import curriculumESP from "./resume_v4_ESP.pdf";
+import resumeENG from "./resume_v4_ENG.pdf";
 import { useTranslation } from "react-i18next";
 import { useLanguageStore } from "../../stores/languageStore";
 

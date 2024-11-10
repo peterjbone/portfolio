@@ -72,23 +72,23 @@ function Work() {
 	return (
 		<>
 			{/* TITLES */}
-			<h2 className="head-text">
-				{t("projects")}
-			</h2>
+			<h2 className="head-text">{t("projects")}</h2>
 
 			{/* FILTER BUTTONS */}
 			{language === "es" ? (
 				<div className="app__work-filter">
-					{["Todos los proyectos", "Principales", "Secundarios"].map((item, index) => (
-						<div
-							key={index}
-							onClick={() => handleWorkFilter(item)}
-							className={`app__work-filter-item app__flex p-text ${
-								activeFilter === item ? "item-active" : ""
-							}`}>
-							{item}
-						</div>
-					))}
+					{["Todos los proyectos", "Principales", "Secundarios"].map(
+						(item, index) => (
+							<div
+								key={index}
+								onClick={() => handleWorkFilter(item)}
+								className={`app__work-filter-item app__flex p-text ${
+									activeFilter === item ? "item-active" : ""
+								}`}>
+								{item}
+							</div>
+						)
+					)}
 				</div>
 			) : (
 				<div className="app__work-filter">
@@ -109,12 +109,14 @@ function Work() {
 			<motion.div
 				animate={animateCard}
 				transition={{ duration: 0.5, delayChildren: 0.5 }}
-				className="app__work-portfolio">
+        className="app__work-portfolio">
+        
 				{filterWork.map((work, index) => (
 					<div className="app__work-item app__flex" key={index}>
+						{/* image */}
 						<div className="app__work-img app__flex">
 							<img src={urlFor(work.imgUrl)} alt={work.name} />
-
+						  {/* layer */}
 							<motion.div
 								whileHover={{ opacity: [0, 1] }}
 								transition={{
@@ -123,6 +125,7 @@ function Work() {
 									staggerChildren: 0.5
 								}}
 								className="app__work-hover app__flex">
+								{/* production link*/}
 								<a href={work.projectLink} target="_blank" rel="noopener noreferrer">
 									<motion.div
 										whileInView={{ scale: [0, 1] }}
@@ -132,6 +135,7 @@ function Work() {
 										<AiFillEye />
 									</motion.div>
 								</a>
+								{/* github link*/}
 								<a href={work.codeLink} target="_blank" rel="noopener noreferrer">
 									<motion.div
 										whileInView={{ scale: [0, 1] }}
@@ -144,12 +148,14 @@ function Work() {
 							</motion.div>
 						</div>
 
+						{/* content of the card*/}
 						<div className="app__work-content app__flex">
+							{/* title and description*/}
 							<h4 className="bold-text">{work.title}</h4>
 							<p className="p-text" style={{ marginTop: 10 }}>
 								{work.description}
 							</p>
-
+							{/* Tag (with position absolute) */}
 							<div className="app__work-tag app__flex">
 								<p className="p-text">{work.tags[0]}</p>
 							</div>
